@@ -83,12 +83,10 @@ body {
 
 }
 .team-section {
-    /*background: #50afd1;*/
-    background: whitesmoke;
+    background: #50afd1;
 }
 .contact-section {
-    /*background: #2472b4;*/
-    background: #f0efee;
+    background: #2472b4;
 }
 
 ._front-section {
@@ -100,19 +98,17 @@ header 部分
 */
 
 .header {
-    height: 70px;
+    height: 60px;
     width: 100%;
     position: fixed;
     top:0;
-    /*background: rgba(255,255,255,0.5);*/
-    box-shadow: 0 0 8px rgba(0,0,0,0.3);
 }
 
 .header-logo {
     background-image: url("../img/logo.png");
     height: 100%;
-    height: 70px;
-    line-height: 70px;
+    height: 60px;
+    line-height: 60px;
     font-weight: 700;
     background-repeat: no-repeat;
     background-size: contain;
@@ -139,11 +135,11 @@ header 部分
 
 .m-s-c-w .title {
     margin-top: 20px;
-    font-size: 45px;
+    font-size: 55px;
     margin-bottom: 40px;
 }
 .m-s-c-w .slg {
-    font-size: 16px;
+    font-size: 22px;
     color: #444;
     display: block;
     margin-bottom: 20px;
@@ -202,22 +198,13 @@ a.slidesjs-next {
 
 .t-s-c-w {
     width: 1000px;
-    height: 600px;
+    height: 700px;
     position: relative;
     margin : 0 auto;
-    padding-top: 100px;
+    padding-top: 60px;
     text-align: center;
     top: 50%;
-    margin-top: -350px;
-}
-
-.tscw-title {
-    font-size: 50px;
-    letter-spacing: 2px;
-    font-weight: 500;
-    font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 10px;
+    margin-top: -400px;
 }
 
 ul.team-list {
@@ -246,7 +233,7 @@ ul.team-list:last-child:after {
 .member-avatar-wrapper {
     width: 200px;
     height: 200px;
-    border: 1px solid white;
+    box-shadow: 0 0 8px white;
     border-radius: 50%;
     position: relative;
     cursor: pointer;
@@ -276,17 +263,49 @@ ul.team-list:last-child:after {
     opacity: 1;
 }
 .member-intro {
+    color: white;
 }
 
 .member-name {
     margin: 10px auto;
     font-weight: bold;
-    color: #444;
 }
 
 .member-job {
     font-size: 12px;
     color: #444;
+}
+
+.tscw-make-niubility {
+    color: white;
+    margin-top: 20px;
+    font-weight: normal;
+    text-align: center;
+}
+.tscw-make-niubility .niubility-title {
+    font-weight: 300;
+    font-size: 30px;
+}
+.tscw-make-niubility .niubility-title:before {
+    content: '讲真的,';
+    display: inline-block;
+    background: rgba(240,240,240,0.4);
+    border-radius: 5px;
+    font-size: 30px;
+    padding: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-right: 8px;
+}
+.tscw-make-niubility .niubility-desc {
+    width: 600px;
+    color: #f0efee;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-weight: 100;
 }
 
 /*
