@@ -243,8 +243,8 @@ ul.team-list:last-child:after {
     top: 0;
     left:0;
     position: absolute;
-    width: 200px;
-    margin-top: -40px;
+    width: 202px;
+    margin-top: -43px;
     transition: all 0.3s;
 }
 .member-hover-avatar {
@@ -252,8 +252,8 @@ ul.team-list:last-child:after {
     opacity: 0;
     left: 0;
     position: absolute;
-    width: 200px;
-    margin-top: -40px;
+    width: 202px;
+    margin-top: -43px;
     transition: all 0.3s;
 }
 .member-avatar-wrapper:hover .member-avatar {
