@@ -5,7 +5,6 @@
 window.onload = function()
 {
     document.body.addEventListener("mousewheel",function(event){
-        console.log(event.deltaY);
         /*
         need a lock for 0.7s
          */
@@ -76,8 +75,41 @@ window.onload = function()
         /* Retina Display Support */
         retina_detect: true
     });
-}
+    /*
+         auto zoom
+     */
+    _resize();
+    $(window).resize(function(){
+        _resize();
+    })
+};
 
+/*
+resize function
+ */
+var origin = {
+        width : 1448,
+        height: 849
+    };
+function _resize() {
+    var current_W_H = $("body").height();
+    var current_W_W = $("body").width();
+    $(".auto-zoom").each(function () {
+        if ((current_W_H / current_W_W) > (origin.height/origin.width)) {
+            /* 以宽度比例计算 */
+            var Q = current_W_W/origin.width;
+            console.log("Q=" + Q);
+            $(this).css("zoom",Q);
+        }
+        else
+        {
+            /* 以高度比例计算*/
+            var Q = current_W_H/origin.height;
+            console.log("Q=" + Q);
+            $(this).css("zoom",Q);
+        }
+    });
+}
 
 
 /*
@@ -153,5 +185,6 @@ function goNext()
         front_section.addClass("_front-section");
     }
 }
+
 
 
