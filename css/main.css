@@ -83,10 +83,12 @@ body {
 
 }
 .team-section {
-    background: #50afd1;
+    /*background: #50afd1;*/
+    background: whitesmoke;
 }
 .contact-section {
-    background: #2472b4;
+    /*background: #2472b4;*/
+    background: #f0efee;
 }
 
 ._front-section {
@@ -98,18 +100,28 @@ header 部分
 */
 
 .header {
-    height: 7%;
+    height: 70px;
     width: 100%;
     position: fixed;
     top:0;
+    /*background: rgba(255,255,255,0.5);*/
     box-shadow: 0 0 8px rgba(0,0,0,0.3);
 }
 
 .header-logo {
     background-image: url("../img/logo.png");
     height: 100%;
+    height: 70px;
+    line-height: 70px;
+    font-weight: 700;
     background-repeat: no-repeat;
     background-size: contain;
+}
+.header-logo:before {
+    height: 100%;
+    font-size: 30px;
+    padding: 0 20px;
+    vertical-align: bottom;
 }
 
 /*
@@ -264,12 +276,12 @@ ul.team-list:last-child:after {
     opacity: 1;
 }
 .member-intro {
-    color: white;
 }
 
 .member-name {
     margin: 10px auto;
     font-weight: bold;
+    color: #444;
 }
 
 .member-job {
@@ -318,17 +330,32 @@ ul.team-list:last-child:after {
 }
 
 .contact-form .form-group input {
+    outline: none;
     width: 100%;
     height: 40px;
     border-radius: 5px;
     border: 1px solid #e8e8e8;
     display: inline-block;
+    padding-left: 8px;
+    box-sizing: border-box;
 }
 
 .contact-form .form-group textarea {
+    outline: none;
     width: 100%;
+    outline: none;
+    box-sizing: border-box;
+    padding-left: 8px;
     height: 200px;
     border-radius: 5px;
     border: 1px solid #e8e8e8;
     display: inline-block;
+}
+
+.contact-form .form-group input:focus {
+    box-shadow: 0 0 1px #2472b4;
+}
+
+.contact-form .form-group textarea:focus {
+    box-shadow: 0 0 1px #2472b4;
 }

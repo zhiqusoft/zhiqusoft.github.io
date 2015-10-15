@@ -32,7 +32,7 @@ window.onload = function()
     /* config dom id (optional) + config particles params */
     particlesJS('particles-js', {
         particles: {
-            color: '#fff',
+            color: '#2472b4',
             shape: 'triangle', // "circle", "edge" or "triangle"
             opacity: 1,
             size: 2,
@@ -41,7 +41,7 @@ window.onload = function()
             line_linked: {
                 enable_auto: true,
                 distance: 50,
-                color: '#fff',
+                color: '#2472b5',
                 opacity: 1,
                 width: 1,
                 condensed_mode: {
