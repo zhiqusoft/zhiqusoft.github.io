@@ -156,10 +156,38 @@ header 部分
     display: none;
 }
 a.slidesjs-previous {
-    display: none;
+    width: 40px;
+    height: 60px;
+    background: rgba(230,230,230,0.6);
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -30px;
+    color: rgba(255,255,255,0);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(244,244,244,1);
 }
 a.slidesjs-next {
-    display: none;
+    width: 40px;
+    height: 60px;
+    background: rgba(230,230,230,0.6);
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -30px;
+    color: rgba(255,255,255,0);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(244,244,244,1);
+}
+
+.slidesjs-navigation {
+    cursor: pointer;
+    z-index: 200;
+}
+.slidesjs-navigation :hover {
+    box-shadow: 0 0 5px black;
 }
 
 .f-s-c-w {
@@ -359,14 +387,16 @@ ul.team-list:last-child:after {
     display: inline-block;
     padding-left: 8px;
     box-sizing: border-box;
+    font-family: PingHei;
 }
 
 .contact-form .form-group textarea {
     outline: none;
+    font-family: PingHei;
     width: 100%;
     outline: none;
     box-sizing: border-box;
-    padding-left: 8px;
+    padding: 8px;
     height: 200px;
     border-radius: 5px;
     border: 1px solid #e8e8e8;

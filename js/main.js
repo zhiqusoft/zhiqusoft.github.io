@@ -2,8 +2,10 @@
  * Created by JiangYulin on 2015/10/14.
  */
 
+
 window.onload = function()
 {
+    /* for webkit */
     document.body.addEventListener("mousewheel",function(event){
         /*
         need a lock for 0.7s
@@ -14,6 +16,26 @@ window.onload = function()
         }
         lock();
         if(event.deltaY > 0)
+        {
+            goNext();
+            setTimeout(unlock,700);
+        }
+        else {
+            goPrev();
+            setTimeout(unlock,700);
+        }
+    });
+    /* for firefox */
+    document.body.addEventListener("DOMMouseScroll",function(event){
+        /*
+         need a lock for 0.7s
+         */
+        if(islock())
+        {
+            return false;
+        }
+        lock();
+        if(event.detail > 0)
         {
             goNext();
             setTimeout(unlock,700);
@@ -75,13 +97,29 @@ window.onload = function()
         /* Retina Display Support */
         retina_detect: true
     });
+
     /*
          auto zoom
      */
-    _resize();
-    $(window).resize(function(){
+    {
         _resize();
+        $(window).resize(function () {
+            _resize();
+        })
+    }
+    //auto zoom 结束
+
+    //contact-form 表单验证
+    $("#contact-from").validate();
+    /*
+        contact 部分的表单提交
+    */
+
+    $("#contact-form-submit").click(function(event){
+        event.preventDefault();
+
     })
+
 };
 
 /*
@@ -139,6 +177,12 @@ $(function(){
 });
 
 /*
+
+ */
+
+
+
+/*
 lock & unlock
  */
 var _lock = false;
@@ -185,6 +229,10 @@ function goNext()
         front_section.addClass("_front-section");
     }
 }
+
+
+
+
 
 
 
