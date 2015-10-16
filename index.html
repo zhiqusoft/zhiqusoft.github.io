@@ -9,7 +9,7 @@
                 .888                                            88o
              .ooooooooooooooo.                                  88o
            8888888888888888888                                  8888o
-           -->
+-->
 
 <html>
 <head lang="en">
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <script src="./js/jquery.min.js"></script>
     <script src="./js/jquery.slides.min.js"></script>
-    <script src="./js/jquery.validate.min.js"></script>
+    <script src="./js/jquery.form.js"></script>
     <script src="./js/particles.min.js"></script>
     <script src="./js/main.js">
     </script>
@@ -153,18 +153,18 @@
             <div data-origin-height="600" data-origin-width="500" class="auto-zoom c-s-c-w">
                 <h2 class="cscw-title">联系我们</h2>
                 <div class="contact-form-container">
-                <form id="contact-form" class="contact-form">
+                <form id="contact-form" class="contact-form" method="post" action="server.php">
                     <div class="form-group">
                         <label>称呼</label>
-                        <input name="name" type="text" required>
+                        <input name="name" data-validate-rule="name" type="text" />
                     </div>
                      <div class="form-group">
-                        <label>联系方式</label>
-                        <input name="name" type="tel" required="">
+                        <label>移动电话</label>
+                        <input name="mobile" data-validate-rule="mobile" type="number" />
                     </div>
                      <div class="form-group">
                         <label>需求描述</label>
-                        <textarea name="name" type="text" min-length="20" required></textarea>
+                        <textarea name="content" type="text" ></textarea>
                     </div>
                     <div class="form-group text-center">
                         <button id="contact-form-submit" class="button" type="submit">提交</button>

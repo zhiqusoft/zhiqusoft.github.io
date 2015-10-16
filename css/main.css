@@ -369,6 +369,10 @@ ul.team-list:last-child:after {
 .contact-form .form-group {
     margin-bottom: 15px;
 }
+.contact-form .form-group .error {
+    border-color: red;
+    box-shadow: 0 0 3px red;
+}
 
 .contact-form .form-group label{
     display: block;

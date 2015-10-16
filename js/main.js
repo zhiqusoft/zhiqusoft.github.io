@@ -109,18 +109,103 @@ window.onload = function()
     }
     //auto zoom 结束
 
-    //contact-form 表单验证
-    $("#contact-from").validate();
     /*
         contact 部分的表单提交
     */
-
+    //验证表单
+    _validateOnBlur($("#contact-form"));
+    //验证并提交
     $("#contact-form-submit").click(function(event){
         event.preventDefault();
-
+        if(_validateForm($("#contact-form")))
+        {
+            $("#contact-form").ajaxSubmit({
+                success:function(data){
+                    if(data == 0)
+                    {
+                    }
+                    else
+                    {
+                    }
+                }
+            });
+        }
     })
 
 };
+/*
+_validate function
+    验证表单函数
+ */
+//验证规则
+var rules = {
+        name: function(ele) {
+            if(ele.val().length < 6 )
+            {
+                return {
+                    'status' : false,
+                    'message': '最小长度为6'
+                }
+            }
+            return {
+                'status': true,
+                'message': ''
+            }
+        },
+        mobile : function(ele) {
+            return {
+                'status': true,
+                'message': ''
+            }
+        },
+        email : function(ele) {
+            return {
+                'status': true,
+                'message': ''
+            }
+        }
+    };
+//验证函数
+function _validate(element){
+        var foo = element.data("validate-rule");
+        var result = rules[foo](element);
+        if(!result.status) {
+            element.addClass('error');
+            return false;
+        }
+    return true;
+}
+//验证完整表单
+function _validateForm(form)
+{
+    //get elements that use rule;
+    var validate_elements = form.find("[data-validate-rule]");
+    for(var i=0;i<validate_elements.length;i++){
+        var element = $(validate_elements[i]);
+        if(!_validate(element))
+        {
+            return false;
+        }
+    }
+    return true;
+}
+/*
+    焦点移除时的验证
+ */
+function _validateOnBlur(form){
+    form.find("[data-validate-rule]").each(function(){
+        $(this).blur(function(){
+            _validate($(this));
+        });
+        $(this).focus(function() {
+            $(this).removeClass('error');
+        })
+    })
+}
+
+/*
+    验证部分相关函数结束
+ */
 
 /*
 resize function
@@ -230,9 +315,8 @@ function goNext()
     }
 }
 
-
-
-
-
+/*
+    联系我们表单 动画
+ */
 
 
