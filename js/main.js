@@ -108,6 +108,10 @@ window.onload = function()
         })
     }
     //auto zoom 结束
+    /*
+    Ipad 滑动支持
+     */
+    fixed_touch_support();
 
     /*
         contact 部分的表单提交
@@ -313,6 +317,35 @@ function goNext()
         next_front_section.addClass("_front-section");
         front_section.addClass("_front-section");
     }
+}
+
+/*
+IPad 等设备滑动支持
+ */
+var touch_start_y;
+var touch_end_y;
+var touch_start_timestamp;
+var touch_end_timestamp;
+
+function fixed_touch_support()
+{
+    var showcase = document.getElementById("showcase");
+    showcase.addEventListener("touchstart",function(event){
+        touch_start_y = event.touches[0].pageY;
+        touch_start_timestamp = new Date().getTime();
+    });
+    showcase.addEventListener("touchmove",function(event){
+        touch_end_y = event.touches[0].pageY;
+        touch_end_timestamp = new Date().getTime();
+    });
+    showcase.addEventListener("touchend",function(event){
+        if((touch_start_y - touch_end_y)>0) {
+            goNext();
+        }
+        else {
+            goPrev();
+        }
+    });
 }
 
 /*

@@ -8,6 +8,7 @@
  * $param mobile
  * $param content
  */
+
 require_once("db_config.php");
 $pdo = new PDO("mysql:host=".$DB["server"].";dbname=".$DB["dbn"],$DB["user"],$DB['password']);
 
