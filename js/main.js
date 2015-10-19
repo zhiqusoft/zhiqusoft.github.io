@@ -331,6 +331,7 @@ function fixed_touch_support()
 {
     document.body.addEventListener("touchstart",function(event){
         event.preventDefault();
+        event.stopPropagation();
     });
     var showcase = document.getElementById("showcase");
     showcase.addEventListener("touchstart",function(event){
@@ -342,7 +343,7 @@ function fixed_touch_support()
         touch_end_timestamp = new Date().getTime();
     });
     showcase.addEventListener("touchend",function(event){
-        if((touch_start_y - touch_end_y)>0) {
+        if((touch_start_y - touch_end_y)>100) {
             goNext();
         }
         else {
