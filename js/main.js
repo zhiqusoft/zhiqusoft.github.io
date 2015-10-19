@@ -329,6 +329,9 @@ var touch_end_timestamp;
 
 function fixed_touch_support()
 {
+    document.body.addEventListener("touchstart",function(event){
+        event.preventDefault();
+    });
     var showcase = document.getElementById("showcase");
     showcase.addEventListener("touchstart",function(event){
         touch_start_y = event.touches[0].pageY;
