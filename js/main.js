@@ -346,7 +346,7 @@ function fixed_touch_support()
         if((touch_start_y - touch_end_y)>100) {
             goNext();
         }
-        else {
+        else if((touch_start_y - touch_end_y)< -100) {
             goPrev();
         }
     });
