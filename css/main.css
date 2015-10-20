@@ -63,6 +63,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    -moz-transition: all 0.7s;
+    -ms-transition: all 0.7s;
     transition: all 0.7s;
     transform: translateY(100%);
 }
@@ -246,7 +248,7 @@ ul.team-list {
 }
 ul.team-list .team-member {
     width: 240px;
-    height: 300px;
+    height: 320px;
     display: inline-block;
     box-sizing: border-box;
     margin: 0;

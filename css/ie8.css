@@ -1,0 +1,34 @@
+body {
+    font-family: "Microsoft Yahei"!important;
+    height: auto;
+    position:relative;
+    min-width: 1000px;
+}
+.header {
+    position: -ms-device-fixed;
+    z-index: 20;
+    background: white;
+}
+.showcase {
+    height: auto;
+}
+.section {
+    position: relative;
+    height:900px;
+    float:left;
+}
+.main-section {
+    background: lightseagreen;
+    color: white!important;
+}
+
+.m-s-c-w button{
+    display: none;
+}
+.m-s-c-w .slg {
+    color: white;
+}
+
+.slidesjs-navigation {
+    display: none!important;
+}
