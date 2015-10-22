@@ -29,7 +29,7 @@ window.onload = function()
                 return false;
             }
             lock();
-            if (event.wheelDelta > 0) {
+            if (event.wheelDelta < 0) {
                 goNext();
                 setTimeout(unlock, 700);
             }
@@ -47,7 +47,7 @@ window.onload = function()
                 return false;
             }
             lock();
-            if (event.detail > 0) {
+            if (event.detail < 0) {
                 goNext();
                 setTimeout(unlock, 700);
             }
@@ -65,7 +65,7 @@ window.onload = function()
                 return false;
             }
             lock();
-            if (event.wheelDelta > 0) {
+            if (event.wheelDelta < 0) {
                 goNext();
                 setTimeout(unlock, 700);
             }
@@ -156,17 +156,19 @@ window.onload = function()
                 $("#particles-js").addClass("loading");
                 $("#contact-form").ajaxSubmit({
                     success: function (data) {
+                        $("#particles-js").removeClass("loading");
                         if (data == 0) {
                             //成功
-                            $("#particles-js").removeClass("loading");
                             $("#particles-js").addClass("success");
 
                         }
                         else {
+                            $("#particles-js").addClass("server-error");
                         }
                     },
                     error: function(data) {
-
+                        $("#particles-js").removeClass("loading");
+                        $("#particles-js").addClass("server-error");
                     }
                 });
             }

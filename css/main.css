@@ -24,8 +24,12 @@ body {
 .text-center {
     text-align: center;
 }
-.tips {
-    color: #666;
+.server-error .error-tips{
+    display: none;
+}
+.error-tips {
+    display: none;
+    color: darkred;
     font-size: 14px;
 }
 
