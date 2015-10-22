@@ -337,9 +337,8 @@ ul.team-list:last-child:after {
     top: 0;
     left:0;
     position: absolute;
-    width: 228px;
-    margin-left: -16px;
-    margin-top: -70px;
+    width: 201px;
+    margin-top: -41px;
     transition: all 0.3s;
 }
 .member-hover-avatar {
@@ -347,9 +346,8 @@ ul.team-list:last-child:after {
     opacity: 0;
     left: 0;
     position: absolute;
-    width: 228px;
-    margin-left: -16px;
-    margin-top: -70px;
+    width: 201px;
+    margin-top: -41px;
     transition: all 0.3s;
 }
 .member-avatar-wrapper:hover .member-avatar {
