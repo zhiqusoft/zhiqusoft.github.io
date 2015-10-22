@@ -25,7 +25,7 @@ body {
     text-align: center;
 }
 .server-error .error-tips{
-    display: none;
+    display: block;
 }
 .error-tips {
     display: none;
