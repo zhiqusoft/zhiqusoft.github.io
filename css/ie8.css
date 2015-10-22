@@ -17,6 +17,9 @@ body {
     height:900px;
     float:left;
 }
+.header-logo {
+    width: 400px;
+}
 .main-section {
     background: lightseagreen;
     color: white!important;
@@ -31,4 +34,10 @@ body {
 
 .slidesjs-navigation {
     display: none!important;
+}
+
+/* */
+
+#level {
+    display: none;
 }

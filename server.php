@@ -15,14 +15,58 @@ $pdo = new PDO("mysql:host=".$DB["server"].";dbname=".$DB["dbn"],$DB["user"],$DB
 $name       = $_POST["name"];
 $mobile     = $_POST["mobile"];
 $content    = $_POST["content"];
+$is_ajax = 0;
+
+if(isset($_SERVER["HTTP_X_REQUESTED_WITH"]) && strtolower($_SERVER["HTTP_X_REQUESTED_WITH"])=="xmlhttprequest"){
+    // ajax 请求的处理方式
+    $is_ajax = 1;
+}else{
+    // 正常请求的处理方式
+    $is_ajax = 0;
+};
 
 $sql = "INSERT INTO customMessage(name,mobile,content) VALUES('$name','$mobile','$content')";
 if($pdo->exec($sql)) {
-    echo 0;
+    if($is_ajax) {
+        echo 0;
+    }
+    else {
+        ?>
+        <html >
+        <head>
+            <title>谢谢您的信任</title>
+            <meta charset="utf-8">
+        </head>
+        <body>
+            <div>
+                <h2>提交成功!</h2>
+            </div>
+        </body>
+        </html>
+<?php
+
+    }
 }
 else
 {
-    echo -1;
-    var_dump($pdo->errorInfo());
+    if($is_ajax) {
+        echo -1;
+    }
+    else {
+        ?>
+        <html >
+        <head>
+            <title>有问题了!</title>
+            <meta charset="utf-8">
+        </head>
+        </head>
+        <body>
+            <div>
+                <h2>提交失败</h2>
+            </div>
+        </body>
+        </html>
+<?php
+    }
 }
 

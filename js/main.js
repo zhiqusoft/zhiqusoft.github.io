@@ -153,12 +153,20 @@ window.onload = function()
         $("#contact-form-submit").click(function (event) {
             event.preventDefault();
             if (_validateForm($("#contact-form"))) {
+                $("#particles-js").addClass("loading");
                 $("#contact-form").ajaxSubmit({
                     success: function (data) {
                         if (data == 0) {
+                            //成功
+                            $("#particles-js").removeClass("loading");
+                            $("#particles-js").addClass("success");
+
                         }
                         else {
                         }
+                    },
+                    error: function(data) {
+
                     }
                 });
             }
@@ -173,11 +181,11 @@ _validate function
 //验证规则
 var rules = {
         name: function(ele) {
-            if(ele.val().length < 6 )
+            if(ele.val().length < 2 )
             {
                 return {
                     'status' : false,
-                    'message': '最小长度为6'
+                    'message': '最小长度为2'
                 }
             }
             return {
@@ -186,6 +194,13 @@ var rules = {
             }
         },
         mobile : function(ele) {
+            if(ele.val().length < 11 )
+            {
+                return {
+                    'status' : false,
+                    'message': '最小长度为11'
+                }
+            }
             return {
                 'status': true,
                 'message': ''
@@ -254,15 +269,15 @@ function _resize() {
         if ((current_W_H / current_W_W) > (origin.height/origin.width)) {
             /* 以宽度比例计算 */
             var Q = current_W_W/origin.width;
-            console.log("Q=" + Q);
-            $(this).css("transform","scale("+Q+")");
+            //$(this).css("transform","scale("+Q+")");
+            $(this).css("zoom",Q);
         }
         else
         {
             /* 以高度比例计算*/
             var Q = current_W_H/origin.height;
-            console.log("Q=" + Q);
-            $(this).css("transform","scale("+Q+")");
+            $(this).css("zoom",Q);
+            //$(this).css("transform","scale("+Q+")");
         }
     });
 }
@@ -398,9 +413,4 @@ function fixed_touch_support()
         }
     });
 }
-
-/*
-    联系我们表单 动画
- */
-
 
