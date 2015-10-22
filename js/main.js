@@ -151,6 +151,7 @@ window.onload = function()
         _validateOnBlur($("#contact-form"));
         //验证并提交
         $("#contact-form-submit").click(function (event) {
+            $("#particles-js").removeClass("server-error");
             event.preventDefault();
             if (_validateForm($("#contact-form"))) {
                 $("#particles-js").addClass("loading");
