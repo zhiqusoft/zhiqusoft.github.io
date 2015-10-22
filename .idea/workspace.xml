@@ -34,8 +34,8 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.75982535" vertical-offset="7680" max-vertical-offset="14664">
-              <caret line="349" column="21" selection-start-line="349" selection-start-column="21" selection-end-line="349" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.83842796" vertical-offset="2616" max-vertical-offset="15168">
+              <caret line="141" column="35" selection-start-line="141" selection-start-column="35" selection-end-line="141" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -79,8 +79,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-26.88" vertical-offset="5184" max-vertical-offset="6168">
-              <caret line="244" column="35" selection-start-line="244" selection-start-column="35" selection-end-line="244" selection-end-column="35" />
+            <state vertical-scroll-proportion="-13.44" vertical-offset="504" max-vertical-offset="6216">
+              <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -152,8 +152,8 @@
         <option value="$PROJECT_DIR$/db_config.php" />
         <option value="$PROJECT_DIR$/css/ie8.css" />
         <option value="$PROJECT_DIR$/server.php" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/main.css" />
       </list>
     </option>
@@ -783,14 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-26.88" vertical-offset="5184" max-vertical-offset="6168">
-          <caret line="244" column="35" selection-start-line="244" selection-start-column="35" selection-end-line="244" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3264" max-vertical-offset="10200">
@@ -799,10 +791,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.44" vertical-offset="504" max-vertical-offset="6216">
+          <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75982535" vertical-offset="7680" max-vertical-offset="14664">
-          <caret line="349" column="21" selection-start-line="349" selection-start-column="21" selection-end-line="349" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.83842796" vertical-offset="2616" max-vertical-offset="15168">
+          <caret line="141" column="35" selection-start-line="141" selection-start-column="35" selection-end-line="141" selection-end-column="35" />
           <folding />
         </state>
       </provider>
