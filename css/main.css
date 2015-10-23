@@ -207,6 +207,8 @@ header 部分
     font-size: 55px;
     margin-bottom: 40px;
     transition: all 0.7s ease-out;
+    color: white;
+    text-shadow: 0 0 3px rgba(0,0,0,0.9);
 }
 .active .m-s-c-w .title {
     transform: translateY(10px)
