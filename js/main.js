@@ -342,6 +342,10 @@ function goPrev()
 {
     var front_section = $("#showcase").find(".active");
     var prev_front_section = front_section.prev();
+    if(prev_front_section.prev().length == 0)
+    {
+        $(".header").addClass("on-first-page");
+    }
     if(prev_front_section.length != 0) {
         if(IE) {
             front_section.animate({'opacity': 0}, function () {
@@ -366,6 +370,7 @@ function goNext()
 {
     var front_section = $("#showcase").find(".active");
     var next_front_section = front_section.next();
+    $(".header").removeClass("on-first-page");
     if(next_front_section.length != 0) {
         if(IE) {
             next_front_section.addClass("_front-section");

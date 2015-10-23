@@ -80,6 +80,11 @@ body {
     background-repeat: no-repeat;
     background-position:center;
 }
+
+.tech-section {
+    background: #DB4D6D;
+}
+
 .focus-section {
     background: white;
     /*background-image: url('../img/baby.jpg') ;*/
@@ -91,7 +96,7 @@ body {
 
 }
 .team-section {
-    background: #50afd1;
+    background: dimgray;
 }
 .contact-section {
     background: #2472b4;
@@ -126,9 +131,18 @@ header 部分
     box-shadow: 0 0 1px rgba(0,0,0,0.4);
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
+    position: fixed;
+    top: 0;
+    right: 20px;
 }
-.follow-us-on-twitter {
+.header.on-first-page .social-media {
+    background: none;
+    border:none;
+    box-shadow: none;
+}
+.social-media.follow-us-on-twitter {
     opacity: 0.5;
+    right: 90px;
 }
 
 .header-logo {
@@ -137,13 +151,17 @@ header 部分
     height: 60px;
     line-height: 60px;
     vertical-align: middle;
-    background-color: rgba(255,255,255,0.5);
+    transition: all 0.3s;
+    background-color: transparent;
     box-shadow: 0 0 1px rgba(0,0,0,0.5);
     border-bottom-right-radius: 5px;
     font-weight: 700;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 300px;
     display: inline-block;
+}
+.on-first-page .header-logo {
+    width: 100%;
 }
 
 .header-logo:before {
