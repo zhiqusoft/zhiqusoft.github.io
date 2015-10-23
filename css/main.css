@@ -215,7 +215,8 @@ header 部分
 }
 .m-s-c-w .slg {
     font-size: 22px;
-    color: #444;
+    color: white;
+    text-shadow: 0 0 3px rgba(255,255,255,0.5);
     display: block;
     margin-bottom: 20px;
     transform: translateY(20px);
