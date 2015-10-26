@@ -194,15 +194,20 @@ header 部分
 
 .active .m-s-c-w {
     transform: translateY(0px);
+    -webkit-transform: translateY(0px);
     opacity: 1;
     transition-delay: 0.7s;
+    -webkit-transition-delay: 0.7s;
 }
+
 .m-s-c-w {
     width: 800px;
     height: 200px;
     opacity: 0;
     transform: translateY(50px);
+    -webkit-transform: translateY(50px);
     transition: all 0.7s ease-out;
+    -webkit-transition: all 0.7s ease-out;
     top: 50%;
     position: relative;
     margin: -100px auto 0 auto;
@@ -214,11 +219,13 @@ header 部分
     font-size: 55px;
     margin-bottom: 40px;
     transition: all 0.7s ease-out;
+    -webkit-transition: all 0.7s ease-out;
     color: white;
     text-shadow: 0 0 3px rgba(0,0,0,0.9);
 }
 .active .m-s-c-w .title {
     transform: translateY(10px)
+    -webkit-transform: translateY(10px)
 }
 .m-s-c-w .slg {
     font-size: 22px;
@@ -227,20 +234,28 @@ header 部分
     display: block;
     margin-bottom: 20px;
     transform: translateY(20px);
+    -webkit-transform: translateY(20px);
     transition: all 0.7s ease-out;
+    -webkit-transition: all 0.7s ease-out;
 }
 .active .m-s-c-w .slg {
     transition: all 0.7s ease-out;
+    -webkit-transition: all 0.7s ease-out;
     transform: translateY(0px)
+    -webkit-transform: translateY(0px)
 }
 
 .m-s-c-w .go-next {
     transition: all 0.7s ease-in;
+    -webkit-transition: all 0.7s ease-in;
     transform: translateY(0px);
+    -webkit-transform: translateY(0px);
 }
 .active .m-s-c-w .go-next {
     transform: translateY(0px)
+    -webkit-transform: translateY(0px)
     transition: all 0.7s ease-in;
+    -webkit-transition: all 0.7s ease-in;
 }
 /*
     focus 部分
