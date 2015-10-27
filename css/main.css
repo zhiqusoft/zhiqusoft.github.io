@@ -84,8 +84,76 @@ body {
 }
 
 .tech-section {
-    background: #DB4D6D;
+    background-image: url("../img/service.png");
+    background-size: cover;
 }
+
+.tech-section .tech-s-c-w {
+    height: 400px;
+    width: 800px;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    margin-left: -400px;
+    top: 50%;
+    margin-top: -200px;
+
+}
+
+.tech-s-c-w .title {
+    font-size: 70px;
+    color: gray;
+    text-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+.tech-s-c-w .title:before {
+    content: "移动端";
+    color: dodgerblue;
+}
+
+.tech-s-c-w .slg {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: grey;
+    font-size: 30px;
+    text-shadow: 0 0 2px rgba(0,0,0,0.3);
+}
+
+.tech-s-c-w  ul.two-side-list {
+    width: 800px;
+    color: grey;
+    font-size: 25px;
+    letter-spacing: 3px;
+    padding: 0;
+    text-shadow: 0 0 2px rgba(0,0,0,0.3);
+    list-style: none;
+    display: block;
+    position: relative;
+    margin-top: 40px;
+}
+
+.tech-s-c-w ul:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.tech-s-c-w .two-side-list li {
+    width: 400px;
+    margin-top: 10px;
+    float: right;
+    display: inline-block;
+    color: grey;
+    position: relative;
+    text-align: right;
+    font-size: 20px;
+    text-shadow: 2px 3px 8px rgba(25,25,25,0.8);
+}
+
+.tech-s-c-w .two-side-list li:nth-child(2n) {
+    text-align: left;
+}
+
 
 .focus-section {
     background: white;
