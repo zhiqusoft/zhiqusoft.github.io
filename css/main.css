@@ -89,14 +89,16 @@ body {
 }
 
 .tech-section .tech-s-c-w {
-    height: 400px;
+    height: 800px;
     width: 800px;
     text-align: center;
     position: relative;
     left: 50%;
     margin-left: -400px;
     top: 50%;
-    margin-top: -200px;
+    margin-top: -400px;
+    padding-top: 50px;
+    box-sizing: border-box;
 
 }
 
@@ -119,42 +121,11 @@ body {
     text-shadow: 0 0 2px rgba(0,0,0,0.3);
 }
 
-.tech-s-c-w  ul.two-side-list {
+.web-page {
     width: 800px;
-    color: grey;
-    font-size: 25px;
-    letter-spacing: 3px;
-    padding: 0;
-    text-shadow: 0 0 2px rgba(0,0,0,0.3);
-    list-style: none;
-    display: block;
-    position: relative;
-    margin-top: 40px;
+    margin-top: 30px;
+    border: none;
 }
-
-.tech-s-c-w ul:after {
-    content: '';
-    display: block;
-    clear: both;
-}
-
-.tech-s-c-w .two-side-list li {
-    width: 400px;
-    margin-top: 10px;
-    float: right;
-    display: inline-block;
-    color: grey;
-    position: relative;
-    text-align: right;
-    font-size: 20px;
-    text-shadow: 0px 0 2px rgba(25,25,25,0.8);
-}
-
-.tech-s-c-w .two-side-list li:nth-child(2n) {
-    text-align: left;
-}
-
-
 .focus-section {
     background: white;
     /*background-image: url('../img/baby.jpg') ;*/
@@ -166,7 +137,7 @@ body {
 
 }
 .team-section {
-    background: lightsteelblue;
+    background: #50afd1;
 }
 .contact-section {
     background: #2472b4;
@@ -478,9 +449,13 @@ ul.team-list:last-child:after {
     width: 201px;
     margin-top: -41px;
     transition: all 0.3s;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
 }
 .member-hover-avatar {
     top: 0;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
     opacity: 0;
     left: 0;
     position: absolute;
@@ -587,17 +562,14 @@ ul.team-list:last-child:after {
     border-radius: 3px;
     transition: all 0.7s;
 }
-
 .cscw-title {
     text-align: center;
     font-size: 30px;
     margin-bottom: 20px;
 }
-
 .contact-form-container {
 
 }
-
 .contact-form .form-group {
     margin-bottom: 15px;
 }
@@ -738,6 +710,19 @@ ul.team-list:last-child:after {
     transform-origin:250px 300px -250px;
 }
 
+.c-s-c-w-footer {
+    width: 100%;
+    height: 30px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+}
 
-
-
+.c-s-c-w-footer span {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 20px;
+    color: white;
+    font-size: 14px;
+}
