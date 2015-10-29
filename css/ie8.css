@@ -49,3 +49,6 @@ body {
 ul.team-list .team-member {
     float: left;
 }
+.m-s-c-w-footer {
+    display: none;
+}
