@@ -5,6 +5,9 @@
     src:local('☺︎'), url("../fonts/PingHei-light.woff") format("woff");
     /* Copyright (c) 2000-2008, Changzhou SinoType Technology Co., Ltd.  All rights reserved. */
 }
+img {
+    border: none;
+}
 html {
     height: 100%;
     width: 100%;
@@ -101,12 +104,18 @@ body {
     box-sizing: border-box;
 
 }
-
 .tech-s-c-w .title {
     font-size: 70px;
+    transform: translateY(20px);
+    transition: all 0.5s;
     color: gray;
     text-shadow: 0 0 3px rgba(0,0,0,0.5);
 }
+
+.active .tech-s-c-w .title {
+    transform: translateY(0);
+}
+
 .tech-s-c-w .title:before {
     content: "移动端";
     color: dodgerblue;
@@ -114,18 +123,32 @@ body {
 
 .tech-s-c-w .slg {
     display: block;
+    transition: all 0.5s;
+    transform: translateY(25px);
+    transition: all 0.5s;
     margin-top: 20px;
     margin-bottom: 20px;
     color: grey;
     font-size: 30px;
     text-shadow: 0 0 2px rgba(0,0,0,0.3);
 }
+.active .tech-s-c-w .slg {
+    transform: translateY(0px);
+}
 
 .web-page {
     width: 800px;
     margin-top: 30px;
     border: none;
+    transition: all 0.6s;
+    transform: translateY(30px);
 }
+
+.active .web-page {
+    transform: translateY(0px);
+}
+
+
 .focus-section {
     background: white;
     /*background-image: url('../img/baby.jpg') ;*/
@@ -287,8 +310,8 @@ header 部分
 .m-s-c-w .go-next {
     transition: all 0.7s ease-in;
     -webkit-transition: all 0.7s ease-in;
-    transform: translateY(0px);
-    -webkit-transform: translateY(0px);
+    transform: translateY(20px);
+    -webkit-transform: translateY(20px);
 }
 .active .m-s-c-w .go-next {
     transform: translateY(0px)
@@ -352,10 +375,11 @@ a.slidesjs-next {
 .f-s-c-w {
     width: 800px;
     height: 750px;
-    top: 0;
+    top: 50%;
+    margin-top: -375px;
     position: relative;
-    margin-right: auto;
-    margin-left: auto;
+    left: 50%;
+    margin-left: -400px;
     margin-bottom: 0;
 }
 #slides {

@@ -3,8 +3,14 @@
  */
 
 console.log(navigator.userAgent)
-var IE8 = 1;
 var IE = 0;
+var IE8 = 0;
+var IE9 = 0;
+var IE11 = 0
+if(navigator.userAgent.indexOf('MSIE') >= 0)
+{
+    IE = 1;
+}
 if (navigator.userAgent.indexOf('MSIE 8') >= 0) {
     IE8 = 1;
 }
@@ -12,14 +18,18 @@ else {
     IE8 = 0;
 }
 if (navigator.userAgent.indexOf('MSIE 9') >= 0) {
-    IE = 1;
+    IE9 = 1;
 }
 else {
-    IE = 0;
+    IE9 = 0;
 }
+if  (navigator.userAgent.indexOf('Trident') >= 0){
+    IE11 = 1;
+}
+
 window.onload = function()
 {
-    if(!IE8) {
+    if(!IE) {
         /* for webkit */
         document.body.addEventListener("mousewheel", function (event) {
             /*
@@ -76,7 +86,7 @@ window.onload = function()
         });
     }
 
-    if(!IE8) {
+    if(!IE8 && !IE) {
         /* particlesJS('dom-id', params);
          /* @dom-id : set the html tag id [string, optional, default value : particles-js]
          /* @params: set the params [object, optional, default values : check particles.js] */
@@ -132,7 +142,7 @@ window.onload = function()
         /*
          auto zoom
          */
-        {
+        if(!IE && !IE11){
             _resize();
             $(window).resize(function () {
                 _resize();
@@ -268,21 +278,22 @@ var origin = {
 function _resize() {
     var current_W_H = $("body").height();
     var current_W_W = $("body").width();
-    $(".auto-zoom").each(function () {
-        if ((current_W_H / current_W_W) > (origin.height/origin.width)) {
-            /* 以宽度比例计算 */
-            var Q = current_W_W/origin.width;
-            //$(this).css("transform","scale("+Q+")");
-            $(this).css("zoom",Q);
-        }
-        else
-        {
-            /* 以高度比例计算*/
-            var Q = current_W_H/origin.height;
-            $(this).css("zoom",Q);
-            //$(this).css("transform","scale("+Q+")");
-        }
-    });
+    if( !IE11) {
+        $(".auto-zoom").each(function () {
+            if ((current_W_H / current_W_W) > (origin.height / origin.width)) {
+                /* 以宽度比例计算 */
+                var Q = current_W_W / origin.width;
+                //$(this).css("transform","scale("+Q+")");
+                $(this).css("zoom", Q);
+            }
+            else {
+                /* 以高度比例计算*/
+                var Q = current_W_H / origin.height;
+                $(this).css("zoom", Q);
+                //$(this).css("transform","scale("+Q+")");
+            }
+        });
+    }
 }
 
 
@@ -347,7 +358,7 @@ function goPrev()
         $(".header").addClass("on-first-page");
     }
     if(prev_front_section.length != 0) {
-        if(IE) {
+        if(IE9) {
             front_section.animate({'opacity': 0}, function () {
                 front_section.removeClass("_front-section");
                 front_section.removeClass("active");
@@ -372,7 +383,7 @@ function goNext()
     var next_front_section = front_section.next();
     $(".header").removeClass("on-first-page");
     if(next_front_section.length != 0) {
-        if(IE) {
+        if(IE9) {
             next_front_section.addClass("_front-section");
             next_front_section.css({"opacity":0});
             next_front_section.animate({"opacity": 1}, function () {

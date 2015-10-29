@@ -41,3 +41,11 @@ body {
 #level {
     display: none;
 }
+
+.member-hover-avatar {
+    display: none;
+}
+
+ul.team-list .team-member {
+    float: left;
+}
