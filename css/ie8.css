@@ -5,11 +5,13 @@ body {
     min-width: 1000px;
 }
 .header {
-    position: -ms-device-fixed;
     z-index: 20;
     background: white;
+    position: -ms-device-fixed;
 }
 .showcase {
+    margin-top: 60px;
+    position: relative;
     height: auto;
 }
 .section {
@@ -49,6 +51,6 @@ body {
 ul.team-list .team-member {
     float: left;
 }
-.m-s-c-w-footer {
-    display: none;
+.c-s-c-w-footer {
+    display: none!important;
 }
