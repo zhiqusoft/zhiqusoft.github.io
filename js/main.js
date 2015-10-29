@@ -4,32 +4,35 @@
 
 console.log(navigator.userAgent)
 var IE = 0;
+var IE6 = 0;
+var IE7 = 0;
 var IE8 = 0;
 var IE9 = 0;
 var IE11 = 0
-if(navigator.userAgent.indexOf('MSIE') >= 0)
-{
+if(navigator.userAgent.indexOf('MSIE') >= 0) {
     IE = 1;
+    if (navigator.userAgent.indexOf('MSIE 8') >= 0) {
+        IE8 = 1;
+    }
+    else if (navigator.userAgent.indexOf('MSIE 9') >= 0) {
+        IE9 = 1;
+    }
+    else if (navigator.userAgent.indexOf('MSIE 7') >= 0) {
+        IE7 = 1;
+    }
+    else if (navigator.userAgent.indexOf('MSIE 6') >= 0) {
+        IE6 = 1;
+    }
 }
-if (navigator.userAgent.indexOf('MSIE 8') >= 0) {
-    IE8 = 1;
-}
-else {
-    IE8 = 0;
-}
-if (navigator.userAgent.indexOf('MSIE 9') >= 0) {
-    IE9 = 1;
-}
-else {
-    IE9 = 0;
-}
+
 if  (navigator.userAgent.indexOf('Trident') >= 0){
     IE11 = 1;
 }
 
 window.onload = function()
 {
-    if(!IE) {
+    if(!IE8 && !IE7 && !IE6) {
+        console.log("One");
         /* for webkit */
         document.body.addEventListener("mousewheel", function (event) {
             /*
@@ -67,7 +70,9 @@ window.onload = function()
             }
         });
     } else {
+        console.log("two");
         window.attachEvent("mousewheel", function (event) {
+            console.log("three");
             /*
              need a lock for 0.7s
              */
@@ -76,6 +81,7 @@ window.onload = function()
             }
             lock();
             if (event.wheelDelta < 0) {
+                console.log("move down");
                 goNext();
                 setTimeout(unlock, 700);
             }
@@ -142,7 +148,7 @@ window.onload = function()
         /*
          auto zoom
          */
-        if(!IE && !IE11){
+        if(1){
             _resize();
             $(window).resize(function () {
                 _resize();
@@ -278,22 +284,20 @@ var origin = {
 function _resize() {
     var current_W_H = $("body").height();
     var current_W_W = $("body").width();
-    if( !IE11) {
         $(".auto-zoom").each(function () {
             if ((current_W_H / current_W_W) > (origin.height / origin.width)) {
                 /* 以宽度比例计算 */
                 var Q = current_W_W / origin.width;
-                //$(this).css("transform","scale("+Q+")");
-                $(this).css("zoom", Q);
+                $(this).css("transform","scale("+Q+")");
+                //$(this).css("zoom", Q);
             }
             else {
                 /* 以高度比例计算*/
                 var Q = current_W_H / origin.height;
-                $(this).css("zoom", Q);
-                //$(this).css("transform","scale("+Q+")");
+                //$(this).css("zoom", Q);
+                $(this).css("transform","scale("+Q+")");
             }
         });
-    }
 }
 
 
