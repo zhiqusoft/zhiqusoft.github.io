@@ -101,7 +101,7 @@ window.onload = function()
         particlesJS('particles-js', {
             particles: {
                 color: '#fff',
-                shape: 'triangle', // "circle", "edge" or "triangle"
+                shape: 'edge', // "circle", "edge" or "triangle"
                 opacity: 1,
                 size: 2,
                 size_random: true,
@@ -306,8 +306,8 @@ function _resize() {
  */
 $(function(){
     $("#slides").slidesjs({
-        width: 800,
-        height: 1000,
+        width: 1000,
+        height: 750,
         play: {
             //active: true,
             auto: true,
